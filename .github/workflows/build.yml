@@ -12,9 +12,9 @@ jobs:
       - uses: gradle/actions/setup-gradle@v3
         with:
           gradle-version: 8.1.1
-      - run: unzip -q saiyanlegacy-1.20.1-forge.zip
-      - run: cd saiyanlegacy && gradle build
+      - run: unzip -q saiyanlegacy-v2-1.20.1-forge.zip
+      - run: cd saiyanlegacy-v2 && gradle build
       - uses: actions/upload-artifact@v4
         with:
           name: saiyanlegacy-jar
-          path: saiyanlegacy/build/libs/*.jar
+          path: saiyanlegacy-v2/build/libs/*.jar
